@@ -38,11 +38,13 @@
    Here, we will use CURL to send POST and GET requests to the server. There are 5 test cases inside the test folder, they are all json files and we will use one        test case at a time. In each test case, I have considered a hybrid of scenarios described in the 'Description' column of the table. The Payload column describes      the json file and the 'Input command and Output' column shows output for the respective http request to the server. 
    
    Sending the POST requests will generate the receipt id.
+   
    Sending a GET request will display the points for a receipt id.
    
    CURL Commands syntax
    
    For POST request:  curl -X POST http://127.0.0.1:5000/receipts/process -H "Content-Type:application/json" -d@test/case1.json
+   
    FOR GET request:   curl http://127.0.0.1:5000/receipts/{id}/points   (Replace the {id} with the receipt id generated after sending POST request)
    
    Open another terminal and inside the project folder 'fetch', type the curl commands to see the output.
@@ -91,5 +93,6 @@ The following cases will return an error code 400 with the description that “T
 #Assumptions
 
 1. I am assuming that the user has CURL installed in their device. For installation guide, I referred the following website https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux
+
 2. In rule 5, I have assumed that we will always ROUND UP the price to the nearest integer after multiplying it by 0.2. I have made this assumption by referring to the sample test cases provided in the assignment
 
