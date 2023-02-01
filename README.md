@@ -40,6 +40,11 @@
    Sending the POST requests will generate the receipt id.
    Sending a GET request will display the points for a receipt id.
    
+   CURL Commands syntax
+   
+   For POST request:  curl -X POST http://127.0.0.1:5000/receipts/process -H "Content-Type:application/json" -d@test/case1.json
+   FOR GET request:   curl http://127.0.0.1:5000/receipts/{id}/points   (Replace the {id} with the receipt id generated after sending POST request)
+   
    Open another terminal and inside the project folder 'fetch', type the curl commands to see the output.
    
    ![image](https://user-images.githubusercontent.com/41851792/216145070-cf3dcfdd-198d-44d9-a0c8-4652c129e05b.png)
@@ -58,13 +63,13 @@
 
 For testing my program, I have considered a few cases for checking logical errors and validation errors.
 
-# Logical Errors
+## Logical Errors
 
 ![image](https://user-images.githubusercontent.com/41851792/216145677-0569dfd6-5cd1-46d9-aeec-60713a5029a2.png)
 
 ![image](https://user-images.githubusercontent.com/41851792/216145717-d3629c99-b77a-4bb7-a2b7-6ec84448da91.png)
 
-# Validation Errors
+## Validation Errors
 
 The following cases will return an error code 400 with the description that “The receipt is invalid” if any of the following fields are 
 
@@ -83,6 +88,8 @@ The following cases will return an error code 400 with the description that “T
 12. The price of the item has datatype other than string and if it doesn’t match the format defined in the api documentation
 
 
+#Assumptions
 
-
+1. I am assuming that the user has CURL installed in their device. For installation guide, I referred the following website https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux
+2. In rule 5, I have assumed that we will always ROUND UP the price to the nearest integer after multiplying it by 0.2. I have made this assumption by referring to the sample test cases provided in the assignment
 
