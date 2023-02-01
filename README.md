@@ -42,6 +42,47 @@
    
    Open another terminal and inside the project folder 'fetch', type the curl commands to see the output.
    
+   ![image](https://user-images.githubusercontent.com/41851792/216145070-cf3dcfdd-198d-44d9-a0c8-4652c129e05b.png)
+
+   ![image](https://user-images.githubusercontent.com/41851792/216145224-4ff56bd3-c7a7-403f-8577-1ff6ed62524b.png)
+
+   ![image](https://user-images.githubusercontent.com/41851792/216145292-ec062fdd-dda7-45dc-a881-a6a63553a73a.png)
    
+   
+6. Sample output of the entire process
+
+   ![image](https://user-images.githubusercontent.com/41851792/216145484-7749fee0-e240-4a61-9043-ed82fe6a3f15.png)
+
+
+# Testing
+
+For testing my program, I have considered a few cases for checking logical errors and validation errors.
+
+# Logical Errors
+
+![image](https://user-images.githubusercontent.com/41851792/216145677-0569dfd6-5cd1-46d9-aeec-60713a5029a2.png)
+
+![image](https://user-images.githubusercontent.com/41851792/216145717-d3629c99-b77a-4bb7-a2b7-6ec84448da91.png)
+
+# Validation Errors
+
+The following cases will return an error code 400 with the description that “The receipt is invalid” if any of the following fields are 
+
+
+1. Retailer field is missing in the payload (uploaded receipt)
+2. purchaseDate is missing in the payload (uploaded receipt)
+3. purchaseTime is missing in the payload (uploaded receipt)
+4. items is missing in the payload (uploaded receipt)
+5. total is missing in the payload (uploaded receipt)
+6. The value of the attribute “retailer” has datatype other than string and if it doesn’t match the pattern defined in the api documentation
+7. The value of the attribute “total” has datatype other than string and if it doesn’t match the pattern defined in the api documentation
+8. The value of the attribute “items” has datatype other than list and if its length is less than 1
+9. The value of the attribute “purchaseDate” has datatype other than string and if it doesn’t match the format defined in the api documentation
+10. The value of the attribute “purchaseTime” has datatype other than string and if it doesn’t match the format defined in the api documentation
+11. The short description of the item has datatype other than string and if it doesn’t match the format defined in the api documentation
+12. The price of the item has datatype other than string and if it doesn’t match the format defined in the api documentation
+
+
+
 
 
