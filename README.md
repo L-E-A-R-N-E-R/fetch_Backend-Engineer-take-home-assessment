@@ -94,7 +94,7 @@ The following cases will return an error code 400 with the description that “T
 12. The price of the item has datatype other than string and if it doesn’t match the format defined in the api documentation
 
 
-#Assumptions
+# Assumptions
 
 1. I am assuming that the user has CURL installed in their device. For installation guide, I referred the following website https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux
 
