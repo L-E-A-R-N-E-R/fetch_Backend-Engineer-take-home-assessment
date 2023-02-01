@@ -43,9 +43,13 @@
    
    CURL Commands syntax
    
-   For POST request:  curl -X POST http://127.0.0.1:5000/receipts/process -H "Content-Type:application/json" -d@test/case1.json
+   For POST request:  
    
-   FOR GET request:   curl http://127.0.0.1:5000/receipts/{id}/points   (Replace the {id} with the receipt id generated after sending POST request)
+   curl -X POST http://127.0.0.1:5000/receipts/process -H "Content-Type:application/json" -d@test/case1.json
+   
+   FOR GET request:   
+   
+   curl http://127.0.0.1:5000/receipts/{id}/points   (Replace the {id} with the receipt id generated after sending POST request)
    
    Open another terminal and inside the project folder 'fetch', type the curl commands to see the output.
    
